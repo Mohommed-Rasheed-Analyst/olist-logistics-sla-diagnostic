@@ -74,19 +74,33 @@ Specific pipeline decisions were made to prevent skewed diagnostic metrics:
 
 ---
 
-## 🔮 Next Steps
+## **Next Steps**
+* **Decompose the fulfillment pipeline:** Split total delivery time into merchant handling time (purchase approval to carrier pickup) and carrier transit time (pickup to customer delivery). This pinpoints whether late deliveries stem from slow seller dispatch or carrier transit bottlenecks.
+* **Product category & bulk analysis:** Merge item weight, volume, and product categories to check if specific oversize goods (like furniture or large appliances) disproportionately cause the 7+ day severe delay cluster.
+* **Carrier partner benchmarking:** If third-party logistics provider identifiers are available, benchmark individual carrier performance along the highest-breach lanes (e.g., Southeast to Northeast and Rio de Janeiro) to identify underperforming contracts.
 
-* **Decompose the Lead Time Pipeline:** Isolate merchant handling time (order approval to carrier pickup) from carrier transit time (pickup to customer delivery) to determine whether late deliveries originate from seller dispatch delays or courier transit bottlenecks.
-* **Bulky & Fragile Product SKU Analysis:** Cross-reference item dimensions and weight by product category to determine if heavy freight items disproportionately drive the 7+ day delay cluster.
+---
+
+---
 
 ---
 
 ## 📁 Repository Structure & Reproduction
 
 ```text
+olist-logistics-sla-diagnostic/
 ├── data/
 │   └── (Olist CSV tables: orders, items, reviews, customers, sellers)
 ├── notebooks/
 │   └── Olist_Logistics_SLA_Diagnostic.ipynb
 ├── requirements.txt
 └── README.md
+```
+## 👤 Author
+
+## 👤 Author
+
+- **Mohommed Rasheed**  
+- **LinkedIn:** [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mohommed-rasheed-analyst)
+
+*Feedbacks, suggestions, and contributions are always welcome! Feel free to reach out.*
